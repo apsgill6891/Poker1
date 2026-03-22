@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poker Lab | Interactive Poker Strategy Trainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero shell">
+      <nav class="topbar">
+        <div>
+          <p class="eyebrow">Poker Lab</p>
+          <h1>Learn winning poker strategy with interactive tools.</h1>
+        </div>
+        <a class="button ghost" href="#trainer">Open strategy trainer</a>
+      </nav>
+      <div class="hero-grid">
+        <section class="hero-copy card">
+          <p class="lead">
+            Study the most important cash game and tournament concepts in one place:
+            preflop ranges, position, stack pressure, bluffing, bet sizing, pot odds,
+            and exploitative adjustments.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#roadmap">Explore roadmap</a>
+            <a class="button ghost" href="#quiz">Take a quick quiz</a>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>6</strong>
+              <span>Core strategy tracks</span>
+            </div>
+            <div>
+              <strong>25+</strong>
+              <span>Decision prompts</span>
+            </div>
+            <div>
+              <strong>13x13</strong>
+              <span>Opening hand matrix</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card quick-panel">
+          <h2>What you can train</h2>
+          <ul>
+            <li>Choose better starting hands by position.</li>
+            <li>See how stack depth changes aggression.</li>
+            <li>Practice responses to limps, opens, and 3-bets.</li>
+            <li>Use pot odds and equity heuristics faster.</li>
+            <li>Separate GTO-inspired baselines from exploits.</li>
+          </ul>
+        </aside>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section id="roadmap" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Strategy roadmap</p>
+          <h2>Move from fundamentals to advanced decision making.</h2>
+        </div>
+        <div class="tab-layout">
+          <div class="tab-buttons" role="tablist" aria-label="Poker learning tracks">
+            <button class="tab-button active" data-tab="preflop">Preflop</button>
+            <button class="tab-button" data-tab="position">Position</button>
+            <button class="tab-button" data-tab="postflop">Postflop</button>
+            <button class="tab-button" data-tab="math">Math</button>
+            <button class="tab-button" data-tab="tournament">Tournament</button>
+            <button class="tab-button" data-tab="exploit">Exploit</button>
+          </div>
+          <div class="tab-panels card">
+            <article class="tab-panel active" id="preflop">
+              <h3>Preflop foundations</h3>
+              <p>
+                Build disciplined opening, calling, 3-betting, and squeezing ranges.
+                Start tighter in early position and widen steadily as you gain positional advantage.
+              </p>
+              <ul>
+                <li>Prioritize big pairs, big aces, and suited Broadway hands first.</li>
+                <li>Use suited connectors and wheel aces more often when stacks are deeper.</li>
+                <li>Avoid dominated offsuit hands out of position.</li>
+              </ul>
+            </article>
+            <article class="tab-panel" id="position">
+              <h3>Position awareness</h3>
+              <p>
+                Position is one of the largest edges in poker. You realize equity better, control pot size,
+                and gather more information when acting later.
+              </p>
+              <ul>
+                <li>Open fewer hands UTG and more hands on the button.</li>
+                <li>Defend blinds selectively and plan postflop lines before you call.</li>
+                <li>Attack capped ranges when you have last action.</li>
+              </ul>
+            </article>
+            <article class="tab-panel" id="postflop">
+              <h3>Postflop play</h3>
+              <p>
+                Use range advantage, nut advantage, and board texture to decide when to c-bet,
+                check back, value bet thinly, or bluff with the right blockers.
+              </p>
+              <ul>
+                <li>Bet more often on dry ace-high and king-high boards.</li>
+                <li>Slow down on coordinated boards that hit the caller harder.</li>
+                <li>Choose draw bluffs that retain equity when called.</li>
+              </ul>
+            </article>
+            <article class="tab-panel" id="math">
+              <h3>Poker math shortcuts</h3>
+              <p>
+                Great players convert probabilities into fast in-game decisions.
+                Pot odds, implied odds, stack-to-pot ratio, and MDF are practical tools—not just theory.
+              </p>
+              <ul>
+                <li>Compare call price to your estimated equity.</li>
+                <li>Use the rule of 2 and 4 for quick draw approximations.</li>
+                <li>Respect SPR: one-pair hands shrink in value as SPR rises.</li>
+              </ul>
+            </article>
+            <article class="tab-panel" id="tournament">
+              <h3>Tournament adjustments</h3>
+              <p>
+                Antes, payout pressure, and shallower stacks change optimal ranges.
+                Learn when to raise-fold, reshove, or pressure medium stacks.
+              </p>
+              <ul>
+                <li>Widen late-position opens at 20–40bb.</li>
+                <li>Adopt push/fold logic as stacks dip below 15bb.</li>
+                <li>Preserve ICM awareness near bubbles and pay jumps.</li>
+              </ul>
+            </article>
+            <article class="tab-panel" id="exploit">
+              <h3>Exploitative strategy</h3>
+              <p>
+                Baseline theory keeps you balanced, but population reads create profit.
+                Adjust when opponents under-bluff, over-fold, limp too much, or call too wide.
+              </p>
+              <ul>
+                <li>Value bet bigger against calling stations.</li>
+                <li>Bluff less when players hate folding river.</li>
+                <li>Isolation raise limpers who enter too many pots.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="trainer" class="section grid-2">
+        <article class="card">
+          <div class="section-heading left">
+            <p class="eyebrow">Strategy trainer</p>
+            <h2>Get a tailored recommendation for common poker spots.</h2>
+          </div>
+          <form id="trainer-form" class="trainer-form">
+            <label>
+              Game format
+              <select id="format">
+                <option value="cash">Cash game</option>
+                <option value="tournament">Tournament</option>
+              </select>
+            </label>
+            <label>
+              Your position
+              <select id="position-select">
+                <option value="utg">UTG / Early</option>
+                <option value="hj">Hijack / Middle</option>
+                <option value="co">Cutoff</option>
+                <option value="btn">Button</option>
+                <option value="sb">Small blind</option>
+                <option value="bb">Big blind</option>
+              </select>
+            </label>
+            <label>
+              Stack depth
+              <select id="stack-depth">
+                <option value="deep">40bb+</option>
+                <option value="medium">15bb–40bb</option>
+                <option value="short">Under 15bb</option>
+              </select>
+            </label>
+            <label>
+              Action before you
+              <select id="prior-action">
+                <option value="folded">Everyone folded</option>
+                <option value="limp">One or more limpers</option>
+                <option value="open">Facing an open raise</option>
+                <option value="threebet">Facing a 3-bet</option>
+              </select>
+            </label>
+            <label>
+              Hand category
+              <select id="hand-category">
+                <option value="premium">Premium pair / AK</option>
+                <option value="strong">Strong Broadway / mid pair</option>
+                <option value="speculative">Suited connector / suited ace</option>
+                <option value="weak">Weak offsuit / dominated hand</option>
+              </select>
+            </label>
+            <button class="button" type="submit">Analyze spot</button>
+          </form>
+        </article>
+
+        <aside class="card output-panel">
+          <p class="eyebrow">Recommendation</p>
+          <h3 id="plan-title">Ready to study a hand?</h3>
+          <p id="plan-summary">
+            Adjust the inputs to see how strong players adapt ranges by position, stack depth, and previous action.
+          </p>
+          <div class="callout-list" id="plan-points"></div>
+        </aside>
+      </section>
+
+      <section class="section grid-2">
+        <article class="card">
+          <div class="section-heading left">
+            <p class="eyebrow">Opening hand matrix</p>
+            <h2>Visualize which hands gain value from position and depth.</h2>
+          </div>
+          <p>
+            Green hands are standard opens from most positions, amber hands are situational,
+            and red hands are usually folds unless a strong exploit exists.
+          </p>
+          <div class="legend">
+            <span><i class="swatch premium"></i> Raise / 3-bet</span>
+            <span><i class="swatch playable"></i> Open selectively</span>
+            <span><i class="swatch fold"></i> Usually fold</span>
+          </div>
+          <div id="range-grid" class="range-grid" aria-label="Opening hand matrix"></div>
+        </article>
+
+        <article id="quiz" class="card quiz-card">
+          <div class="section-heading left">
+            <p class="eyebrow">Quick quiz</p>
+            <h2>Test whether your poker instincts match the spot.</h2>
+          </div>
+          <p id="quiz-question"></p>
+          <div id="quiz-options" class="quiz-options"></div>
+          <p id="quiz-feedback" class="quiz-feedback"></p>
+          <button id="next-question" class="button ghost" type="button">Next question</button>
+        </article>
+      </section>
+    </main>
+
+    <footer class="shell footer">
+      <p>Built for study sessions, coaching demos, and self-paced poker improvement.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
